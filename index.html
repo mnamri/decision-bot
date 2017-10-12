@@ -3,30 +3,46 @@
   <head>
     <link href="./main.css" type="text/css" rel="stylesheet">
     <meta charset=utf-8>
-    <title>Decision-helper</title>
+    <title>Decision-bot</title>
   </head>
   <body>
-    <h1>Decision-helper</h1>
-      <h2>Helping you avoid the uneasiness of making choices</h2>
+    <h1>Decision-bot</h1>
+      <h2>Happy to assist you in your decision-making or lack thereof</h2>
     <div class="inputSection">
       <div class="inputs">
-        <input placeholder="Option"></input>
+        <input placeholder="?"></input>
       </div>
       <button class="addOption">Add</button>
     </div>
     <div class="resultSection"></div>
-    <button>Choose</button>
+    <button class="submit">Choose for me</button>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
       $(function() {
+        /*what the .hide function does in practice is setting display to none*/
         $('.resultSection').hide()
 
         var add_option = function() {
-          $('.inputs').append('<input placeholder="Option"></input>')
+          $('.inputs').append('<input placeholder="?"></input>')
         }
 
         $('.addOption').click(add_option)
+
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          /*below: adding css code in order to show resultSection*/
+          $('.resultSection').css('display', 'flex')
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+          var winner = options[Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+        $('.submit').click(submit)
+
       })
     </script>
   </body>

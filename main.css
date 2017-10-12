@@ -24,7 +24,6 @@ h2 {
   margin-bottom: 0px;
 }
 
-
 /*targeting (.) the class (inputSection):*/
 .inputSection {
   margin: 50px 0px 80px 0px;
@@ -43,4 +42,12 @@ input {
 
 .addOption {
   margin-top: 10px;
+}
+
+.resultSection {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
 }
