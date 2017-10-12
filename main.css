@@ -1,6 +1,6 @@
 body {
   background-color: blue;
-  background-image: linear-gradient(blue, red);
+  background-image: linear-gradient(blue, red, blue);
   display: flex;
   flex-direction: column;
   justify-content: center;

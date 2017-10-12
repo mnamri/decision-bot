@@ -10,10 +10,24 @@
       <h2>Helping you avoid the uneasiness of making choices</h2>
     <div class="inputSection">
       <div class="inputs">
-        <input placeholder="Something"></input>
+        <input placeholder="Option"></input>
       </div>
-      <button class="addOption">Add alternative</button>
+      <button class="addOption">Add</button>
     </div>
-    <button>Choose for me</button>
+    <div class="resultSection"></div>
+    <button>Choose</button>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input placeholder="Option"></input>')
+        }
+
+        $('.addOption').click(add_option)
+      })
+    </script>
   </body>
 </html>
