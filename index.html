@@ -16,19 +16,15 @@
     </div>
     <div class="resultSection"></div>
     <button class="submit">Choose for me</button>
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
       $(function() {
         /*what the .hide function does in practice is setting display to none*/
         $('.resultSection').hide()
-
         var add_option = function() {
           $('.inputs').append('<input placeholder="?"></input>')
         }
-
         $('.addOption').click(add_option)
-
         var options = []
         var submit = function() {
           $('.inputSection').hide()
@@ -42,7 +38,6 @@
           $('.resultSection').text(winner)
         }
         $('.submit').click(submit)
-
       })
     </script>
   </body>

@@ -24,7 +24,7 @@ h2 {
   margin-bottom: 0px;
 }
 
-/*targeting (.) the class (inputSection):*/
+/*targeting is done with the dot . inputSection is the class being targeted*/
 .inputSection {
   margin: 50px 0px 80px 0px;
   width: 400px;
